@@ -1,9 +1,9 @@
-const Color = require('./colors')
+// const Color = require('./colors')
 
 class Typography {
     constructor(data) {
         this.name = data.name;
-        this.color = new Color(data)
+        // this.color = new Color(data)
         this.font = data.style
     }
 
