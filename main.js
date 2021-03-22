@@ -1,13 +1,13 @@
 const request = require("request");
-const secret = require('./secret');
+const config = require('./config');
 const Color = require("./colors");
 const Gradient = require("./gradients")
 
 const start = Date.now();
 var options = { method: 'GET',
-  url: 'https://api.figma.com/v1/files/ejhGAvr1GzNcn1eaEn3AbsD1',
+  url: config["projectUrl"],
   headers: 
-   {'X-Figma-Token': secret["X-Figma-Token"] }
+   {'X-Figma-Token': config["X-Figma-Token"] }
   };
 
 request(options, function (error, response, body) {
